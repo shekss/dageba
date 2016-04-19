@@ -1,0 +1,19 @@
+Feature: Shop online at Amazon.co.uk
+
+
+  Scenario: Sign into Amazon.co.uk
+
+    Given Amazon.co.uk is open
+    When I click Sign-in
+    And enter valid user name password
+    Then I am logged in
+
+
+  Scenario: Search for product add to basket
+
+    Given when I search for "chromecast"
+    When the search results are displayed
+    Then the first result has the word "chromecast" in it
+
+
+  
