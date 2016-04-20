@@ -1,8 +1,7 @@
 Feature: Shop online at Amazon.co.uk
 
 
-  Scenario: Sign into Amazon.co.uk
-
+  Background:
     Given Amazon.co.uk is open
     When I click Sign-in
     And enter valid user name password
@@ -10,14 +9,12 @@ Feature: Shop online at Amazon.co.uk
 
 
   Scenario: Search for product add to basket
-
     Given when I search for "chromecast"
     When the search results are displayed
     Then the first result has the word "chromecast" in it
 
 
   Scenario: Check basket total
-
     Given I add "chromecast" to my basket
     When I check my basket total
     Then it should match the price of "chromecast"
