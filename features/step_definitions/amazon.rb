@@ -1,5 +1,5 @@
 Given(/^Amazon\.co\.uk is open$/) do
-  visit ("https://www.amazon.co.uk")
+  visit ("https://www.amazon.co.uk/")
 end
 
 When(/^I click Sign\-in$/) do
@@ -13,7 +13,6 @@ end
 
 Then(/^I am logged in$/) do
   click_button('signInSubmit')
-  sleep 10
 end
 
 Given(/^when I search for "([^"]*)"$/) do |text|
