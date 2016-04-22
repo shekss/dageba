@@ -1,6 +1,3 @@
-class LoginPage
-  include PageObject
-  include RSpec::Matchers
+class LoginPage < SitePrism::Page
 
-  button :click, value: 'Log in'
 end
