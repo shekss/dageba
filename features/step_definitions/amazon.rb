@@ -25,6 +25,7 @@ When(/^the search results are displayed$/) do
 end
 
 Then(/^the first result has the word "([^"]*)" in it$/) do |chromecast|
+  click_link('Chromecast USB Cable')
   expect(page).to have_content(chromecast)
 end
 
