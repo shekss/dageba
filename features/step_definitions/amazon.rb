@@ -3,29 +3,29 @@ Given(/^Amazon\.co\.uk is open$/) do
 end
 
 When(/^I click Sign\-in$/) do
-  click_on('Sign in')
+  click_on("Sign in")
 end
 
 And(/^enter valid user name password$/) do
-  fill_in('ap_email', :with => 'beck.danny45@yahoo.com')
-  fill_in('ap_password', :with => 'Password1')
+  fill_in("ap_email", :with => "beck.danny45@yahoo.com")
+  fill_in("ap_password", :with => "Password1")
 end
 
 Then(/^I am logged in$/) do
-  click_button('signInSubmit')
+  click_button("signInSubmit")
 end
 
 Given(/^when I search for "([^"]*)"$/) do |text|
   visit ("https://www.amazon.co.uk/")
-  fill_in('twotabsearchtextbox', :with => text)
+  fill_in("twotabsearchtextbox", :with => text)
 end
 
 When(/^the search results are displayed$/) do
-  click_on('Go')
+  click_on("Go")
 end
 
 Then(/^the first result has the word "([^"]*)" in it$/) do |chromecast|
-  click_link('Chromecast USB Cable')
+  click_link("Chromecast USB Cable")
   expect(page).to have_content(chromecast)
 end
 
